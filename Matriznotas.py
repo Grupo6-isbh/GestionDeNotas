@@ -9,12 +9,12 @@ class Matriz_Notas:
         self.columna_promedio = [0] * num_alumnos
         self.columna_condicion = [""] * num_alumnos
 
-    def ingresar_nombres(self):
+    def nombre_alumno(self):
         for i in range(self.num_alumnos):
             nombre = input(f"\nIngrese el nombre del alumno N° {i + 1}: ")
             self.alumnos.append(nombre)
 
-    def ingresar_nota(self, alumno, nota, valor):
+    def nota_alumno(self, alumno, nota, valor):
         if alumno < 1 or alumno > self.num_alumnos:
             print(f"El número de alumno debe estar entre 1 y {self.num_alumnos}")
             return
@@ -23,13 +23,13 @@ class Matriz_Notas:
             return
         self.matriz[alumno - 1][nota - 1] = valor
 
-    def generar_notas_aleatorias(self):
+    def notas_aleatorias(self):
         for i in range(self.num_alumnos):
             for j in range(self.num_notas):
-                nota = random.uniform(0, 10)  # Generar nota aleatoria en el rango de 0 a 10
+                nota = random.uniform(0, 10)
                 self.matriz[i][j] = nota
 
-    def calcular_promedio(self):
+    def calcula_promedio(self):
         for i in range(self.num_alumnos):
             suma = sum(self.matriz[i])
             promedio = suma / self.num_notas
@@ -65,7 +65,7 @@ class Matriz_Notas:
               promedio = self.columna_promedio[i]
               condicion = self.columna_condicion[i]
               print(f"\nNotas de {nombre_alumno}:\t")
-              print("{:<8s}".format(""), end="")  # Espacio en blanco para la primera columna
+              print("{:<8s}".format(""), end="") 
               for j in range(self.num_notas):
                   print("\tNota {:d}".format(j + 1), end="\t")
               print("\tPromedio\tCondición")

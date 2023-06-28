@@ -68,9 +68,9 @@ class Profesor:
                         matriz_notas = Matriz_Notas(materia, num_alumnos, num_notas)
                         matrices[materia] = matriz_notas
 
-                    matriz_notas.ingresar_nombres()
-                    matriz_notas.generar_notas_aleatorias()
-                    matriz_notas.calcular_promedio()
+                    matriz_notas.nombre_alumno()
+                    matriz_notas.notas_aleatorias()
+                    matriz_notas.calcula_promedio()
                     matriz_notas.obtener_condicion()
 
                     print("\n>>>>>>>>>>>> ¡ALUMNOS Y NOTAS GUARDADOS CON ÉXITO! <<<<<<<<<<<<<")
@@ -99,8 +99,8 @@ class Profesor:
                     opcion = 0
 
                 elif opcion == 5:
-                    opcion = 0  # Reiniciar la opción para mostrar el menú de selección de materia nuevamente
-                    break  # Salir del bucle actual y regresar al menú de selección de materia
+                    opcion = 0  
+                    break  
 
             respuesta = input("\n¿Desea volver al menú principal? (s/n): ")
             if respuesta.lower() != "s":
