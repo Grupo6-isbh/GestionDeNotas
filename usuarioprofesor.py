@@ -48,7 +48,7 @@ class Profesor:
             opcion = 0
 
             while opcion not in [1, 2, 3, 4, 5]:
-                print(f"\n**************** {materia} ****************")
+                print(f"\n{materia}")
                 print("Seleccione una de las siguientes opciones:")
                 print("1. Ingresar alumnos y sus respectivas notas")
                 print("2. Buscar Alumno")
@@ -59,8 +59,8 @@ class Profesor:
                 opcion = int(input("Ingrese el número de opción seleccionada: "))
 
                 if opcion == 1:
-                    print(f"\n****************************** {materia} *******************************")
-                    print("\n**************** INGRESAR ALUMNOS Y SUS RESPECTIVAS NOTAS ****************")
+                    print(f"\n{materia}")
+                    print("\nINGRESAR ALUMNOS Y SUS RESPECTIVAS NOTAS")
                     if matriz_notas is None:
                         num_alumnos = int(input("\nIngrese la cantidad de alumnos: "))
                         num_notas = int(input("Ingrese la cantidad de notas del año: "))
@@ -73,25 +73,25 @@ class Profesor:
                     matriz_notas.calcula_promedio()
                     matriz_notas.obtener_condicion()
 
-                    print("\n>>>>>>>>>>>> ¡ALUMNOS Y NOTAS GUARDADOS CON ÉXITO! <<<<<<<<<<<<<")
+                    print("\n ¡ALUMNOS Y NOTAS GUARDADOS CON ÉXITO! <")
                     opcion = 0
 
                 elif opcion == 2:
-                    print(f"\n***************** {materia} ****************")
-                    print("\n**************** BUSCAR ALUMNO ****************")
+                    print(f"\n {materia}")
+                    print("\ BUSCAR ALUMNO")
                     nombre_alumno_buscar = input("\nIngrese el nombre del alumno a buscar: ")
                     matriz_notas.buscar_alumno(nombre_alumno_buscar)
                     opcion = 0
 
                 elif opcion == 3:
-                    print(f"\n**************** {materia} ****************")
-                    print("\n**************** EDITAR ALUMNO ****************")
+                    print(f"\n{materia}")
+                    print("\nEDITAR ALUMNO")
                     nombre_alumno_editar = input("\nIngrese el nombre del alumno a editar: ")
-                    matriz_notas.editar_datos_alumno(nombre_alumno_editar)
+                    matriz_notas.modificar_datos(nombre_alumno_editar)
                     opcion = 0
 
                 elif opcion == 4:
-                    print("\n**************** MOSTRAR TABLA DE ALUMNOS ****************")
+                    print("\nMOSTRAR TABLA DE ALUMNOS")
                     if matriz_notas is not None:
                         matriz_notas.imprimir_matriz(materia)
                     else:

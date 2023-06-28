@@ -45,7 +45,7 @@ class Matriz_Notas:
                 self.columna_condicion[i] = "Promoción"
 
     def imprimir_matriz(self, materia):
-        print(f"\n********************************* {materia} *********************************")
+        print(f"\n{materia}")
         print("   \t", end="")
         for i in range(self.num_notas):
             print(f"       Nota {i + 1}\t", end="")
@@ -78,7 +78,7 @@ class Matriz_Notas:
            if not encontrado:
               print(f"No se encontró al alumno {nombre_alumno}.")
 
-    def editar_datos_alumno(self, nombre_alumno):
+    def modificar_datos(self, nombre_alumno):
          encontrado = False
          for i in range(self.num_alumnos):
              if self.alumnos[i] == nombre_alumno:
